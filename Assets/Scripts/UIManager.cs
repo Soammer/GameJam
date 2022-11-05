@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
         ZArrowUI.transform.position = ZArrowUIParent.transform.position + new Vector3(0, 1f, 0);
         //Z箭头调整位置，即移动到父物体上
     }
-    public void ZArrowDisapper()//Z箭头UI出现
+    public void ZArrowDisappear()//Z箭头UI出现
     {
         ZArrowUI.SetActive(false);
     }
