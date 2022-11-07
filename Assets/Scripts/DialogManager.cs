@@ -23,7 +23,14 @@ public class DialogManager : MonoBehaviour
     private void Start()
     {
         dialogText.text = dialogLines[currentLines];
-        //dialogPanel.SetActive(false);
+        dialogPanel.SetActive(false);
+    }
+    public void dialogManagerShow()//引用dialogManagerShow使对话开始
+    {
+        //dialogLines = newLines;
+        //currentLines = 0;
+        dialogText.text = dialogLines[currentLines];
+        dialogPanel.SetActive(true);
     }
     private void Update()
     {
@@ -37,21 +44,21 @@ public class DialogManager : MonoBehaviour
                     if (currentLines < dialogLines.Length)
                     {
                         //ChekName();
-                        StartCoroutine(scrollingTextCo());//实现滚动输出} 
-                        if (Input.GetKeyDown(KeyCode.LeftControl))//按下左Ctrl跳过对话
-                        {
-                            StopCoroutine(scrollingTextCo());
-                            dialogPanel.SetActive(false);
-                        }
+                        StartCoroutine(scrollingTextCo());//实现滚动输出}
                     }
                     else dialogPanel.SetActive(false);
-                    
+
                 }
-                
+
+            }
+            if (Input.GetKeyDown(KeyCode.LeftControl))//按下左Ctrl跳过对话
+            {
+                StopCoroutine(scrollingTextCo());
+                dialogPanel.SetActive(false);
             }
         }
     }
-    /*private void ChekName()
+    /*private void ChekName()//索引名字
     {
         if (dialogLines[currentLines].StartsWith("n-"))
         {
