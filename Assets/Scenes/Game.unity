@@ -1262,11 +1262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33d572f55fe11544b98d4b08beb83284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseUI: {fileID: 0}
-  zArrowUI: {fileID: 0}
+  pauseUI: {fileID: 1345166833}
+  zArrowUI: {fileID: 556191256}
   zArrowUIParent: {fileID: 0}
-  zText: {fileID: 0}
-  moveText: {fileID: 0}
+  zText: {fileID: 1439232329}
+  moveText: {fileID: 1230318122}
   fadePlane: {fileID: 1048170712}
 --- !u!4 &1253729996
 Transform:
