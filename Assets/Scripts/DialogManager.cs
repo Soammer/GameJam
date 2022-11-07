@@ -12,7 +12,7 @@ public class DialogManager : MonoBehaviour
     }
     public GameObject dialogPanel;//对话面板
     public Text dialogText;//对话文本
-    public Text nameText;//说话人ID
+    //public Text nameText;//说话人ID
     [TextArea(1, 3)]
     public string[] dialogLines;//实现逐字滚动时的输入
     [SerializeField] private int currentLines;
@@ -36,31 +36,34 @@ public class DialogManager : MonoBehaviour
                     currentLines++;
                     if (currentLines < dialogLines.Length)
                     {
-                        ChekName();
+                        //ChekName();
                         StartCoroutine(scrollingTextCo());//实现滚动输出} 
+                        if (Input.GetKeyDown(KeyCode.LeftControl))//按下左Ctrl跳过对话
+                        {
+                            StopCoroutine(scrollingTextCo());
+                            dialogPanel.SetActive(false);
+                        }
                     }
+                    else dialogPanel.SetActive(false);
+                    
                 }
-                if (Input.GetKeyDown(KeyCode.LeftControl))//按下左Ctrl跳过对话
-                {
-                    StopCoroutine(scrollingTextCo());
-                    dialogPanel.SetActive(false);
-                }
+                
             }
         }
     }
-    private void ChekName()
+    /*private void ChekName()
     {
         if (dialogLines[currentLines].StartsWith("n-"))
         {
             nameText.text = dialogLines[currentLines].Replace("n-","");
             currentLines++;
         }
-    }
+    }*/
     IEnumerator scrollingTextCo()
     {
+        dialogPanel.SetActive(true);
         isScrolling = true;
         dialogText.text = "";
-        dialogPanel.SetActive(true);
 
         foreach (char letter in dialogLines[currentLines].ToCharArray())
         {
