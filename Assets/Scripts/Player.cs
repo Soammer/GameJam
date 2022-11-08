@@ -15,11 +15,12 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        isGround = true;
     }
     private void FixedUpdate()
     {
-        isGround = Physics2D.OverlapCircle(GroundCheck.position,0.2f,ground);//记得加layer
+        //测试时注释掉了
+        //isGround = Physics2D.OverlapCircle(GroundCheck.position,0.2f,ground);//记得加layer
     }
     // Update is called once per frame
     void Update()
