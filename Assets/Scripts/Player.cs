@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public Transform GroundCheck;
     public LayerMask ground;
     private bool isGround;
+    public bool canMove;
     // Start is called before the first frame update
     void Start()
     {
