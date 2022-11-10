@@ -43,4 +43,8 @@ public class Player : MonoBehaviour
             transform.position += direction * speed * Time.deltaTime;
         }
     }
+    public void Method(int index,Vector3 pos) 
+    {
+        
+    }
 }
