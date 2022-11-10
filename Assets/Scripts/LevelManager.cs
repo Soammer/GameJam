@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -10,7 +11,6 @@ public class LevelManager : MonoBehaviour
     private UIManager UIManager;
     [SerializeField]
     private float time = 3f;//复活玩家等待时间
-    private int Index = 0;//计算场景更新
     private void Awake()
     {
         if (instance == null)
@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         Instantiate(Scenes[0]);//载入第一个场景
+
     }
     public void Respawn()
     {
@@ -50,16 +51,6 @@ public class LevelManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z))//按Z键交互
             {
                 Debug.Log("交互");
-            }
-        }
-        if (collision.CompareTag("NextScene"))//换场景，方法还没想好
-        {
-            if (Index < 2)//数字是场景数量
-            {
-                Scenes[Index].SetActive(false);
-                Instantiate(Scenes[Index + 1]);
-                Respawn();//复活玩家
-                Index += 1;
             }
         }
     }
