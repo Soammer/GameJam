@@ -914,9 +914,6 @@ MonoBehaviour:
   Scenes:
   - {fileID: 4060433908039581487, guid: a9f847a26ffb737498ed1deea50a129b, type: 3}
   - {fileID: 9002826299846536457, guid: 2b6ede19236c0ab4bb1b19670b5a94d3, type: 3}
-  Players:
-  - {fileID: 4875136068029620900, guid: 6b901d6cc7b9eaa4dbe0b91782ee0996, type: 3}
-  - {fileID: 4875136068029620900, guid: cf3c39c03490d6b46a13216dbe05b461, type: 3}
   GamePlayer: {fileID: 4875136068029620897, guid: 6b901d6cc7b9eaa4dbe0b91782ee0996, type: 3}
   time: 3
 --- !u!4 &562875149
@@ -1239,6 +1236,10 @@ PrefabInstance:
     - target: {fileID: 2387160335243407105, guid: b01b5ae8d58e95f4a919191e576d7e19, type: 3}
       propertyPath: m_Name
       value: Scene2B
+      objectReference: {fileID: 0}
+    - target: {fileID: 2387160335243407105, guid: b01b5ae8d58e95f4a919191e576d7e19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2387160335243407106, guid: b01b5ae8d58e95f4a919191e576d7e19, type: 3}
       propertyPath: m_RootOrder
@@ -2027,6 +2028,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPos: {fileID: 0}
   parameter: 0.1
+  minPosition: {x: -2.9, y: -0.53}
+  maxPosition: {x: -1.87, y: 0.63}
 --- !u!4 &1956282243
 Transform:
   m_ObjectHideFlags: 0
@@ -2097,6 +2100,10 @@ PrefabInstance:
     - target: {fileID: 4132310403849118721, guid: 5799198231c368b4cb7872357b0b7a1a, type: 3}
       propertyPath: m_Name
       value: Scene2A
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132310403849118721, guid: 5799198231c368b4cb7872357b0b7a1a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5799198231c368b4cb7872357b0b7a1a, type: 3}
