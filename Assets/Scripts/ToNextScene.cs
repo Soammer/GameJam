@@ -25,6 +25,7 @@ public class ToNextScene : MonoBehaviour
         {
             Scenes[0].SetActive(false);
             Instantiate(Scenes[1]);
+            UIManager.destory = true;
         }
     }
     void SwitchScene()
