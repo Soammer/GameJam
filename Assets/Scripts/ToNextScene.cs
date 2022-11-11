@@ -23,11 +23,18 @@ public class ToNextScene : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Scenes[0].SetActive(false);
-            Instantiate(Scenes[1]);
             UIManager.destory = true;
+            UIManager.change = true;
+            Invoke("Change", 3);
         }
     }
+
+    private void Change()
+    {
+        Scenes[0].SetActive(false);
+        Instantiate(Scenes[1]);
+    }
+
     void SwitchScene()
     {
         /*if (isSwitch && Input.GetKeyDown(KeyCode.)//可以按键改变场景

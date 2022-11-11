@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static bool destory;//摧毁UI
+    public static bool destory = false, change = false;//摧毁UI
     public static UIManager instance;
     public GameObject pauseUI;//暂停UI
     public GameObject zArrowUI;//Z箭头UI本体
@@ -55,10 +55,11 @@ public class UIManager : MonoBehaviour
 
 
     /*淡入淡出，调用方法：
-     *例： StartCoroutine(FadeCo(Color.clear, Color.black, 1));    
+     *例： StartCoroutine(FadeCo(Color.clear, Color.black, 1,1));    
      */
-    public IEnumerator FadeCo(Color from, Color to, float time)
+    public IEnumerator FadeCo(Color from, Color to, float time, float sleepTime)
     {
+        yield return new WaitForSeconds(sleepTime);
         float speed = 1 / time;
         float percent = 0;
         while (percent < 1)
@@ -69,5 +70,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    
+    private void Update()
+    {
+        if (change)
+        {
+            StartCoroutine(FadeCo(Color.clear, Color.black, 3, 0));
+            StartCoroutine(FadeCo(Color.black, Color.clear, 3, 3));
+            change = false;
+        }
+    }
 }

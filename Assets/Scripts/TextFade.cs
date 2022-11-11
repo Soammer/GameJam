@@ -8,7 +8,7 @@ public class TextFade : MonoBehaviour
     public Text text;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag=="Player")
+        if (collision.tag == "Player")
         {
             StopCoroutine(FadeTextCo(true, 1, text));
             StartCoroutine(FadeTextCo(false, 1, text));
@@ -49,7 +49,7 @@ public class TextFade : MonoBehaviour
     }
     private void Update()
     {
-        if(UIManager.destory)
+        if (UIManager.destory)
         {
             Destroy(text);
             Destroy(gameObject);
