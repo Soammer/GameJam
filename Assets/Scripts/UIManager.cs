@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    public static bool destory;//´Ý»ÙUI
     public static UIManager instance;
     public GameObject pauseUI;//ÔÝÍ£UI
     public GameObject zArrowUI;//Z¼ýÍ·UI±¾Ìå

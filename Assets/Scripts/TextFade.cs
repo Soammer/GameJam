@@ -6,20 +6,20 @@ using UnityEngine.UI;
 public class TextFade : MonoBehaviour
 {
     public Text text;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.tag=="Player")
+        if(collision.tag=="Player")
         {
-            
-            StartCoroutine(FadeTextCo(false, 5, text));
+            StopCoroutine(FadeTextCo(true, 1, text));
+            StartCoroutine(FadeTextCo(false, 1, text));
         }
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (other.tag == "Player")
+        if (collision.tag == "Player")
         {
-           
-            StartCoroutine(FadeTextCo(true, 5, text));
+            StopCoroutine(FadeTextCo(false, 1, text));
+            StartCoroutine(FadeTextCo(true, 1, text));
         }
     }
     public IEnumerator FadeTextCo(bool fade, float time, Text text)
@@ -45,6 +45,14 @@ public class TextFade : MonoBehaviour
                 text.color = new Color(0, 0, 0, alpha);
                 yield return new WaitForSeconds(0);
             }
+        }
+    }
+    private void Update()
+    {
+        if(UIManager.destory)
+        {
+            Destroy(text);
+            Destroy(gameObject);
         }
     }
 }
