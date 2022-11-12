@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6779858298331324167}
   - component: {fileID: 1306827481832835596}
   - component: {fileID: 5482400243273882117}
+  - component: {fileID: 8383977964934602774}
   m_Layer: 0
   m_Name: ToNextScene
   m_TagString: Untagged
@@ -71,11 +72,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2945a57f82307048b113f037ddb6e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSwitch: 0
   Scenes:
   - {fileID: 4060433908039581487}
   - {fileID: 9002826299846536457, guid: 2b6ede19236c0ab4bb1b19670b5a94d3, type: 3}
-  SwitchScenes: []
+--- !u!114 &8383977964934602774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182370600520810353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3964dfdf017c2cb40a25f300d549694a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines: []
+  isEntered: 0
 --- !u!1 &3268592883050838140
 GameObject:
   m_ObjectHideFlags: 0

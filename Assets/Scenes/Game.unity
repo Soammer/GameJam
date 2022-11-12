@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbeaef2f71864cb4d878f3646310c93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 0}
+  playerPos: {fileID: 4875136068029620898, guid: 6b901d6cc7b9eaa4dbe0b91782ee0996, type: 3}
   parameter: 0.1
   minPosition: {x: -2.9, y: -0.53}
   maxPosition: {x: -1.87, y: 0.63}
