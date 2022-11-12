@@ -14,9 +14,9 @@ public class newtree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(tree == null)
+        if(tree==null)
         {
-            transform.GetChild(0).gameObject.SetActive(true);
+            gameObject.SetActive(true);
         }
     }
 }
