@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -19,10 +18,10 @@ public class Player : MonoBehaviour
     public Vector2 RespawnPosition;
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         isGround = true;
         RespawnPosition = player.transform.position;
-
     }
     private void FixedUpdate()
     {
@@ -47,12 +46,12 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= direction * speed * Time.deltaTime;
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += direction * speed * Time.deltaTime;
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
         }
 
     }
