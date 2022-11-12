@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -79,5 +80,11 @@ public class UIManager : MonoBehaviour
             StartCoroutine(FadeCo(Color.white, Color.clear, 3, 3));
             change = false;
         }
+    }
+
+    public void StartButton()
+    {
+        //怎么加个淡入淡出啊，急
+        SceneManager.LoadScene("Game");
     }
 }
