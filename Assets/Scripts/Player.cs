@@ -17,8 +17,10 @@ public class Player : MonoBehaviour
     public Vector2 RespawnPosition;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         isGround = true;
         RespawnPosition = player.transform.position;
+
     }
     private void FixedUpdate()
     {
