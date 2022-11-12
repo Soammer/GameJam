@@ -19,10 +19,10 @@ public class Player : MonoBehaviour
     public Vector2 RespawnPosition;
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         isGround = true;
         RespawnPosition = player.transform.position;
-
     }
     private void FixedUpdate()
     {
