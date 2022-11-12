@@ -13,10 +13,12 @@ public class Player : MonoBehaviour
     public LayerMask ground;
     private bool isGround;
     public bool canMove;
-    // Start is called before the first frame update
+
+    public Vector2 RespawnPosition;
     void Start()
     {
         isGround = true;
+        RespawnPosition = player.transform.position;
     }
     private void FixedUpdate()
     {
