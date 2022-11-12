@@ -79,4 +79,11 @@ public class DialogManager : MonoBehaviour
         }
         isScrolling = false;
     }
+    public void dailogAddition(string[] newLines)
+    {
+        dialogLines = newLines;
+        currentLines = 0;
+        dialogText.text = dialogLines[currentLines];
+        dialogPanel.SetActive(true);
+    }
 }

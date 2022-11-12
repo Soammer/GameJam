@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static float stopTime=3;
-    public static bool destory = false, change = false,timeStop=false,readPlayer=true;//´Ý»ÙUI,ÇÐ»»³¡¾°£¬Ê±Í£,Ñ°ÕÒÍæ¼Ò
+    public static bool destory = false, change = false,timeStop=false;//´Ý»ÙUI,ÇÐ»»³¡¾°£¬Ê±Í£
     public static UIManager instance;
     public GameObject pauseUI;//ÔÝÍ£UI
     public GameObject zArrowUI;//Z¼ýÍ·UI±¾Ìå
@@ -75,8 +75,8 @@ public class UIManager : MonoBehaviour
     {
         if (change)
         {
-            StartCoroutine(FadeCo(Color.clear, Color.black, 3, 0));
-            StartCoroutine(FadeCo(Color.black, Color.clear, 3, 3));
+            StartCoroutine(FadeCo(Color.clear, Color.white, 3, 0));
+            StartCoroutine(FadeCo(Color.white, Color.clear, 3, 3));
             change = false;
         }
     }
