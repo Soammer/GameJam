@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
 {
-    private bool followerX;//x方向视角移动（需要x时把x = true）
-    private bool followerY;//y方向视角移动（需要y时把y = true）{调用x时记得把yfalse掉，调用y时同理}
+    public bool followerX=true;//x方向视角移动（需要x时把x = true）
+    public bool followerY;//y方向视角移动（需要y时把y = true）{调用x时记得把yfalse掉，调用y时同理}
     private float cameraPosX;
     private float cameraPosY;
-
+    public GameObject player;
     public Transform playerPos;//玩家位置（把玩家拖到这里）
     public float parameter = 0.01f;
     public Vector2 minPosition;
@@ -18,6 +18,15 @@ public class cameraFollow : MonoBehaviour
     public void Awake()
     {
         instance = this;
+    }
+    public void Update()
+    {
+        if(UIManager.readPlayer)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerPos = player.transform;
+            UIManager.readPlayer = false;
+        }
     }
 
     private void LateUpdate()

@@ -22,7 +22,7 @@ public class ToNextScene : MonoBehaviour
         {
             UIManager.destory = true;
             UIManager.change = true;
-            UIManager.timeStop = true;//以上都是布尔参数，分别控制新手UI摧毁，关卡切换以及时停
+            UIManager.timeStop = true;//以上都是布尔参数，分别控制新手UI摧毁，关卡切换,时停，下方为索取Player
             Invoke("Change", UIManager.stopTime);
             Invoke("timeStop", UIManager.stopTime*2);
         }
@@ -32,6 +32,7 @@ public class ToNextScene : MonoBehaviour
     {
         Scenes[0].SetActive(false);
         Instantiate(Scenes[1]);
+        UIManager.readPlayer = true;
     }
     private void timeStop()
     {
