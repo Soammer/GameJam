@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
 {
-    private bool followerX;//x方向视角移动
-    private bool followerY;//y方向视角移动
+    private bool followerX;//x方向视角移动（需要x时把x = true）
+    private bool followerY;//y方向视角移动（需要y时把y = true）{调用x时记得把yfalse掉，调用y时同理}
     private float cameraPosX;
     private float cameraPosY;
 
-    public Transform playerPos;//玩家位置
+    public Transform playerPos;//玩家位置（把玩家拖到这里）
     public float parameter = 0.01f;
     public Vector2 minPosition;
     public Vector2 maxPosition;
@@ -46,7 +46,7 @@ public class cameraFollow : MonoBehaviour
     }
     public void cameraLimited(Vector2 minPos,Vector2 maxPos)
     {
-        minPosition = minPos;
-        maxPosition = maxPos;
+        minPosition = minPos;//视角最小位置（自己调）
+        maxPosition = maxPos;//视角最大位置（自己调）
     }
 }
