@@ -29,12 +29,23 @@ public class Player : MonoBehaviour
         if (!UIManager.timeStop)
         {
             Move();
+            Flip();
             if (Input.GetKeyDown(KeyCode.X) && isGround == true)
             {
                 RB.velocity = Vector2.up * jumpforce;//弹跳力可以调，调到合适的位置
             }
         }
-
+    }
+    private void Flip()//翻转
+    {
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
     }
     public void Move()//左右移动
     {
