@@ -23,10 +23,19 @@ public class Player : MonoBehaviour
         isGround = true;
         RespawnPosition = player.transform.position;
     }
-    private void FixedUpdate()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        //测试时注释掉了
-        //isGround = Physics2D.OverlapCircle(GroundCheck.position,0.2f,ground);//记得加layer
+        if(other.CompareTag("ground"))
+        {
+            isGround = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("ground"))
+        {
+            isGround = false;
+        }
     }
     // Update is called once per frame
     void Update()
@@ -36,8 +45,7 @@ public class Player : MonoBehaviour
             Move();
             if (Input.GetKeyDown(KeyCode.X) && isGround == true)
             {
-                RB.velocity = Vector2.up * jumpforce;//弹跳力可以调，调到合适的位置
-                isGround = false;
+                RB.velocity = Vector2.up * jumpforce;
             }
         }
     }
