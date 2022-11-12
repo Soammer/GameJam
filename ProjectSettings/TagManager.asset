@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Death
   - enemy
+  - Deadline
+  - ground
+  - ZUI
+  - PUI
   layers:
   - Default
   - TransparentFX

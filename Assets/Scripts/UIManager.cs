@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 {
     public static float stopTime=3;
     public static bool destory = false, change = false,timeStop=false,findplayer=true;//´Ý»ÙUI,ÇÐ»»³¡¾°£¬Ê±Í£,Ñ°ÕÒÍæ¼Ò
+    public static bool findGameObjects = false;
     public static UIManager instance;
     public GameObject pauseUI;//ÔÝÍ£UI
     public GameObject zArrowUI;//Z¼ýÍ·UI±¾Ìå
@@ -80,11 +81,20 @@ public class UIManager : MonoBehaviour
             StartCoroutine(FadeCo(Color.white, Color.clear, 3, 3));
             change = false;
         }
+        if(findGameObjects)
+        {
+            pauseUI = GameObject.FindGameObjectWithTag("PUI");
+            zArrowUI = GameObject.FindGameObjectWithTag("ZUI");
+            fadePlane = Image.FindObjectOfType<Image>();
+            findGameObjects = true;
+        }
     }
 
     public void StartButton()
     {
         //ÔõÃ´¼Ó¸öµ­Èëµ­³ö°¡£¬¼±
+        //¼Ä¼Ä¼Ä¼Ä~£¬°Ú°Ú°Ú°Ú~
         SceneManager.LoadScene("Game");
+        findGameObjects = true;
     }
 }

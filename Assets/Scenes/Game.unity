@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 556191257}
   m_Layer: 5
   m_Name: zArrow
-  m_TagString: Untagged
+  m_TagString: ZUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1596,7 +1596,7 @@ GameObject:
   - component: {fileID: 1345166834}
   m_Layer: 5
   m_Name: pauseUI
-  m_TagString: Untagged
+  m_TagString: PUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
