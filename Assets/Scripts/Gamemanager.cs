@@ -18,4 +18,8 @@ public class Gamemanager : MonoBehaviour
             UIManager.instance.PauseUIAppear();
         }
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
