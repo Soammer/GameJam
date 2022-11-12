@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public Transform GroundCheck;
     public LayerMask ground;
     private bool isGround;
+    public bool canMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +42,9 @@ public class Player : MonoBehaviour
         {
             transform.position += direction * speed * Time.deltaTime;
         }
+    }
+    public void Method(int index,Vector3 pos) 
+    {
+        
     }
 }
