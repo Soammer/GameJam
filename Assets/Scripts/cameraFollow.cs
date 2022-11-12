@@ -9,6 +9,7 @@ public class cameraFollow : MonoBehaviour
     private float cameraPosX;
     private float cameraPosY;
 
+    public GameObject player;
     public Transform playerPos;//玩家位置（把玩家拖到这里）
     public float parameter = 0.01f;
     public Vector2 minPosition;
@@ -20,6 +21,15 @@ public class cameraFollow : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if(UIManager.findplayer)
+        {
+            player=GameObject.FindGameObjectWithTag("Player");
+            playerPos = player.transform;
+            UIManager.findplayer = false;
+        }
+    }
     private void LateUpdate()
     {
         cameraPosX = transform.position.x;

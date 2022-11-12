@@ -32,6 +32,7 @@ public class ToNextScene : MonoBehaviour
     {
         Scenes[0].SetActive(false);
         Instantiate(Scenes[1]);
+        UIManager.findplayer = true;
     }
     private void timeStop()
     {
