@@ -75,8 +75,8 @@ public class UIManager : MonoBehaviour
     {
         if (change)
         {
-            StartCoroutine(FadeCo(Color.clear, Color.black, 3, 0));
-            StartCoroutine(FadeCo(Color.black, Color.clear, 3, 3));
+            StartCoroutine(FadeCo(Color.clear, Color.white, 3, 0));
+            StartCoroutine(FadeCo(Color.white, Color.clear, 3, 3));
             change = false;
         }
     }
