@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
     {
         GamePlayer.gameObject.SetActive(false);//玩家消失
         yield return new WaitForSeconds(time);//等待时间
-        GamePlayer.transform.position = GamePlayer.RespawnPosition;//设置重生点，Player里面还没写
+        GamePlayer.transform.position = GamePlayer.RespawnPosition;//设置重生点
         GamePlayer.gameObject.SetActive(true);//玩家复活
     }
     private void OnTriggerEnter2D(Collider2D collision)
