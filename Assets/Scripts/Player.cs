@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     public LayerMask ground;
     private bool isGround;
     public bool canMove;
+    SpriteRenderer spriteRenderer; 
 
     public Vector2 RespawnPosition;
     void Start()
@@ -33,7 +35,6 @@ public class Player : MonoBehaviour
         if (!UIManager.timeStop)
         {
             Move();
-            Flip();
             if (Input.GetKeyDown(KeyCode.X) && isGround == true)
             {
                 RB.velocity = Vector2.up * jumpforce;//弹跳力可以调，调到合适的位置
@@ -41,26 +42,17 @@ public class Player : MonoBehaviour
             }
         }
     }
-    private void Flip()//翻转
-    {
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
-        }
-    }
     public void Move()//左右移动
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= direction * speed * Time.deltaTime;
+            spriteRenderer.flipX = true;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += direction * speed * Time.deltaTime;
+            spriteRenderer.flipX = false;
         }
 
     }
