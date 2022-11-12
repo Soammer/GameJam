@@ -31,6 +31,7 @@ public class DialogManager : MonoBehaviour
         //currentLines = 0;
         dialogText.text = dialogLines[currentLines];
         dialogPanel.SetActive(true);
+        UIManager.timeStop = true;
     }
     private void Update()
     {
@@ -46,7 +47,11 @@ public class DialogManager : MonoBehaviour
                         //ChekName();
                         StartCoroutine(scrollingTextCo());//实现滚动输出}
                     }
-                    else dialogPanel.SetActive(false);
+                    else
+                    { 
+                        dialogPanel.SetActive(false);
+                        UIManager.timeStop = false;
+                    }
 
                 }
 
@@ -55,6 +60,7 @@ public class DialogManager : MonoBehaviour
             {
                 StopCoroutine(scrollingTextCo());
                 dialogPanel.SetActive(false);
+                UIManager.timeStop = false;
             }
         }
     }
@@ -85,5 +91,6 @@ public class DialogManager : MonoBehaviour
         currentLines = 0;
         dialogText.text = dialogLines[currentLines];
         dialogPanel.SetActive(true);
+        UIManager.timeStop = true;
     }
 }
