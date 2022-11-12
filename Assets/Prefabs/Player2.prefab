@@ -150,7 +150,7 @@ MonoBehaviour:
   speed: 3
   player: {fileID: 0}
   RB: {fileID: 4875136068029620911}
-  jumpforce: 5
+  jumpforce: 7
   GroundCheck: {fileID: 4875136068029620898}
   ground:
     serializedVersion: 2
