@@ -8,8 +8,8 @@ public class Scene3AChange : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            DialogManager.instance.dialogPanel.SetActive(true);
-            
+            DialogManager.instance.dailogAddition(Consts.instance.lines);
+            UIManager.timeStop = true;
         }
     }
 }

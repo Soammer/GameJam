@@ -455,6 +455,8 @@ GameObject:
   - component: {fileID: 3478460036429006730}
   - component: {fileID: 4272461536745340873}
   - component: {fileID: 694715183420971886}
+  - component: {fileID: 6943927532192064999}
+  - component: {fileID: 1400235071262711679}
   m_Layer: 0
   m_Name: "\u8FB9\u754C2"
   m_TagString: Untagged
@@ -610,6 +612,39 @@ PolygonCollider2D:
       - {x: 8, y: -4.5}
       - {x: 8, y: -3.08}
       - {x: 7.95, y: -3.07}
+--- !u!114 &6943927532192064999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649655704784417698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3964dfdf017c2cb40a25f300d549694a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - "\u5979\u53D1\u73B0\u8FD9\u91CC\u5B9E\u9645\u4E0A\u8FD8\u6709\u53E6\u4E00\u4E2A\u4EBA\uFF0C"
+  - "\u5F53\u5979\u610F\u8BC6\u5230\u7684\u65F6\u5019...\r"
+  - 
+  - "...\u90A3\u6211\u4EEC\uFF0C\u968F\u4FBF\u804A\u70B9\u4EC0\u4E48\u5417\uFF1F"
+  - "\u6216\u8BB8\u4F60\u5E94\u8BE5\u770B\u5411\u56DB\u5468\u2014\u2014\r"
+  - 
+  - "...\u4F60\u771F\u7684\u633A\u70E6\u7684\uFF0C\u4F60\u77E5\u9053\u5417\uFF1F\r"
+  isEntered: 0
+--- !u!114 &1400235071262711679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649655704784417698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9c7880be170e24f949d06612391663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2666679776926231750
 GameObject:
   m_ObjectHideFlags: 0

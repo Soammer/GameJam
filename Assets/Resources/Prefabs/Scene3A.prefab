@@ -1284,6 +1284,7 @@ GameObject:
   - component: {fileID: 7625241378044191113}
   - component: {fileID: 1080338511899120685}
   - component: {fileID: 8186766159207992503}
+  - component: {fileID: 7069837500394533807}
   m_Layer: 0
   m_Name: dialog
   m_TagString: Untagged
@@ -1344,6 +1345,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6cd1f92cf3ebb4abb8947d9a6c0214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7069837500394533807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5843763248148078540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3964dfdf017c2cb40a25f300d549694a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - "\u5979\u9762\u65E0\u8868\u60C5\u5730\u7EE7\u7EED\u524D\u8FDB\u3002\r"
+  isEntered: 0
 --- !u!1 &5887462575829057020
 GameObject:
   m_ObjectHideFlags: 0
