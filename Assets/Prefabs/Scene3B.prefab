@@ -1269,6 +1269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4796608864855485021}
+  - component: {fileID: 3442413284155417316}
   m_Layer: 0
   m_Name: Playerattack
   m_TagString: Untagged
@@ -1292,6 +1293,18 @@ Transform:
   m_Father: {fileID: 1923599253680896733}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3442413284155417316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6441818018031457829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c835a62bd6e87fe4f8f0344e46335e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7722371050072031319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1530,10 @@ PrefabInstance:
     - target: {fileID: 2533035647128174522, guid: d996ec3b58b3df74db88103ffbeeecc7, type: 3}
       propertyPath: m_Name
       value: Slash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533035647128174522, guid: d996ec3b58b3df74db88103ffbeeecc7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3108566826113060186, guid: d996ec3b58b3df74db88103ffbeeecc7, type: 3}
       propertyPath: m_RootOrder
