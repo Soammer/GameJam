@@ -14,9 +14,9 @@ public class newtree : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(tree==null)
+        if(GameObject.FindGameObjectsWithTag("enemy").Length==0)
         {
-            gameObject.SetActive(true);
+            tree.SetActive(true);
         }
     }
 }
