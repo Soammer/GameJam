@@ -22,9 +22,9 @@ public class ToNextScene : MonoBehaviour
         {
             UIManager.destory = true;
             UIManager.change = true;
-            UIManager.timeStop = true;
-            Invoke("Change", 3);
-            Invoke("timeStop", 6);
+            UIManager.timeStop = true;//以上都是布尔参数，分别控制新手UI摧毁，关卡切换以及时停
+            Invoke("Change", UIManager.stopTime);
+            Invoke("timeStop", UIManager.stopTime*2);
         }
     }
 
