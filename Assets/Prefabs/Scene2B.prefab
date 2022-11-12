@@ -555,7 +555,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4467806034712313543}
   - component: {fileID: 2054973467632637866}
-  - component: {fileID: 5437198313263946963}
   m_Layer: 0
   m_Name: "\u544A\u793A\u724Ca"
   m_TagString: Untagged
@@ -631,32 +630,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5437198313263946963
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429829861140363464}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 7.040251, y: -1.183759}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16, y: 9}
-    newSize: {x: 16, y: 9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0057182, y: 1.5651624}
-  m_EdgeRadius: 0
 --- !u!1 &1711444221143880316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,10 +2909,6 @@ PrefabInstance:
     - target: {fileID: 2533035647128174522, guid: d996ec3b58b3df74db88103ffbeeecc7, type: 3}
       propertyPath: m_Name
       value: Slash
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533035647128174522, guid: d996ec3b58b3df74db88103ffbeeecc7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3108566826113060186, guid: d996ec3b58b3df74db88103ffbeeecc7, type: 3}
       propertyPath: m_RootOrder
