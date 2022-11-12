@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cameraFollow : MonoBehaviour
 {
-    public bool followerX=true;//x方向视角移动（需要x时把x = true）
+    public bool followerX;//x方向视角移动（需要x时把x = true）
     public bool followerY;//y方向视角移动（需要y时把y = true）{调用x时记得把yfalse掉，调用y时同理}
     private float cameraPosX;
     private float cameraPosY;
