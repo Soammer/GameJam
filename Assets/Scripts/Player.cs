@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X) && isGround == true)
             {
                 RB.velocity = Vector2.up * jumpforce;//弹跳力可以调，调到合适的位置
+                isGround = false;
             }
         }
     }
@@ -62,5 +63,9 @@ public class Player : MonoBehaviour
     public void Method(int index, Vector3 pos)
     {
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGround = true;
     }
 }
