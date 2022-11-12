@@ -47,12 +47,12 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position -= direction * speed * Time.deltaTime;
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += direction * speed * Time.deltaTime;
-            spriteRenderer.flipX = false;
+            spriteRenderer.flipX = true;
         }
 
     }
