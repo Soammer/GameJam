@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Slash : MonoBehaviour
 {
+    public float damage;
     public void EndAttack()
     {
         gameObject.SetActive(false);
