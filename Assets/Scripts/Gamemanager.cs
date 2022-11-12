@@ -15,7 +15,7 @@ public class Gamemanager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
+            UIManager.instance.PauseUIAppear();
         }
     }
 }
