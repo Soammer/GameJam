@@ -26,11 +26,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        if (Input.GetKeyDown(KeyCode.X) && isGround==true)
+        if (!UIManager.timeStop)
         {
-            RB.velocity = Vector2.up * jumpforce;//弹跳力可以调，调到合适的位置
+            Move();
+            if (Input.GetKeyDown(KeyCode.X) && isGround == true)
+            {
+                RB.velocity = Vector2.up * jumpforce;//弹跳力可以调，调到合适的位置
+            }
         }
+
     }
     public void Move()//左右移动
     {
@@ -42,9 +46,10 @@ public class Player : MonoBehaviour
         {
             transform.position += direction * speed * Time.deltaTime;
         }
+
     }
-    public void Method(int index,Vector3 pos) 
+    public void Method(int index, Vector3 pos)
     {
-        
+
     }
 }

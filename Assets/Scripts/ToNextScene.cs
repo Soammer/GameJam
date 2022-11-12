@@ -14,7 +14,7 @@ public class ToNextScene : MonoBehaviour
     }
     private void Update()
     {
-         
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -22,7 +22,9 @@ public class ToNextScene : MonoBehaviour
         {
             UIManager.destory = true;
             UIManager.change = true;
+            UIManager.timeStop = true;
             Invoke("Change", 3);
+            Invoke("timeStop", 6);
         }
     }
 
@@ -31,6 +33,9 @@ public class ToNextScene : MonoBehaviour
         Scenes[0].SetActive(false);
         Instantiate(Scenes[1]);
     }
-
+    private void timeStop()
+    {
+        UIManager.timeStop = false;
+    }
 
 }
