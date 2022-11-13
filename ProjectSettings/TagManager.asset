@@ -10,6 +10,8 @@ TagManager:
   - ground
   - ZUI
   - PUI
+  - key
+  - door
   layers:
   - Default
   - TransparentFX
