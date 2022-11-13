@@ -20,7 +20,10 @@ public class cameraFollow : MonoBehaviour
     {
         instance = this;
     }
-
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
+    }
     private void Update()
     {
         if(UIManager.findplayer)
